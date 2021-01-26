@@ -1,0 +1,313 @@
+/* reglas: Conjunto de un selector y una declaración (propiedad y valor)
+selectores: 
+    Selector de etiqueta:
+        header -  section - article - nav
+    Selector descendente:
+        body header div nav ol li a{} Usando de ejemplo el index.hmtl
+    Selector de clase:
+        .nameclass{}
+    Selector de id:
+        #nameid{}
+ */
+
+/* Unidades de medida y colores:
+    Color:
+        Se pueden representar un color de tres formas en css: nameColor, transparent; Usando hexadecimales o rgb(), rgba(); Usando hls(), hlsa(). 
+    Unidades de medida:
+        px, em, percent, fr.
+
+    Colores para el proyecto:
+        gris oscuro = #1d252c
+        gris claro = #626262
+        background grus = #1b2127
+        celeste = #026fff
+     */
+
+     body {
+        font-family: 'Source Sans Pro', sans-serif;
+        margin: 0px;
+        background-color: #1b2127;
+     }
+
+     .header{
+         background-color: #1b2127;
+         color: white;
+         display: flex;
+         justify-content: space-between;
+         height: 70px;
+         align-items: center;
+         justify-content: right;
+     }
+
+     .header a{
+         text-decoration: none;
+         color: white;
+         height: inherit;
+         display: flex;
+         align-items: center;
+         padding: 0px 10px;
+     }
+
+     .header ol {
+         display: flex;
+         height: inherit;
+     }
+
+     .header ol li {
+         height: inherit;
+     }
+
+     .menu{
+         height: inherit;
+     }
+
+     h2, h3, h4, h5, h6 {
+        /* font-weight: 400; normal */
+        font-weight: bold;
+     } 
+     
+     h1{
+        font-family: 'Fjalla One', sans-serif; 
+        font-size: 40px;
+         line-height: 1.5;
+         letter-spacing: -0.2px;
+         color: white;
+         margin: 0px;
+         align-items: center;
+     }
+
+     h1 strong{
+         color: #026fff;
+     }
+
+     h2 {
+        font-family: 'Fjalla One', sans-serif; 
+         color: #026fff;
+         text-transform: uppercase;
+         font-size: 24px;
+         font-weight: bold;
+         padding-bottom: 20px;
+         margin: 0px;
+     }
+
+     .hero{
+        /* height: 30px; */
+        display: flex;
+        /* background-image: url(../images/hero.jpg); */
+        background-color: #1b2127;
+        /* background-size: 500px 300px; */
+        /* background-repeat: no-repeat; */
+        background-position-x: right;
+        justify-content: space-between;
+    }
+
+    .hero__image{
+        object-fit: cover;
+    }
+
+    .portfolio{
+        background: #fafafa;
+        padding: 20px;
+        padding-bottom: 5px;
+    }
+
+     .project{
+        /* border-top: 10px solid red;
+        border-right: 10px solid red;
+        border-left: 10px solid red;
+        border-bottom: 10px solid red; 
+        border-color: red;
+        border-width: 15px;
+        border-style: dashed;*/
+        border: 1px solid grey;
+        border-radius: 10px;
+        margin-bottom: 15px;
+        padding: 20px;
+        background: white;
+        display: flex;
+        align-items: center;
+        justify-content: space-between; /*Se hace para alinear elementos de manera horizontal */
+        
+     }
+
+     .project__title{
+         font-size: 30px;
+         font-family: 'Fjalla One', sans-serif;
+         margin-bottom: 10px;
+         margin-top: 0pc; 
+     }
+
+     .project__course, .project__date, .project__url{
+        margin: 10px 0px;
+     }
+
+     .project__description{
+         font-size: 20px;
+     }
+
+     .project__details{
+         width: 500px;
+     }
+
+     .project strong{
+        font-family: 'Fjalla One', sans-serif;
+     }
+
+     .project__imageContainer{
+         width: 500px;
+     }
+
+     ol, ul {
+         margin: 0px;
+         padding: 0;
+         list-style: none;
+     }
+
+     .logo{
+         margin-top: 0;
+     }
+
+     figure{
+         margin: 0;
+     }
+
+     .footer {
+         display: flex;
+         background-color: #1b2127;
+         color: white;
+         align-items: center;
+         justify-content: space-between;
+         padding: 0px 20px 0px 20px;
+         background-color: #1b2127;
+        }
+
+     .footer img {
+         vertical-align: middle;
+         
+     }
+
+     .event__list--title{
+         padding-left: 20px;         
+     }
+
+     .eventList{
+         display: flex;
+         flex-wrap: wrap;
+         background-color: #fafafa;
+     }
+
+     .event {
+         margin: 10px;
+         width: 480px;
+         border-radius: 10px;
+         flex-shrink: 0;
+         overflow: hidden;
+         background-color: #f4fbff;
+     }
+
+     .event img{
+         width: 480px;
+         height: 200px;
+         object-fit: cover;
+     }
+
+     .event__detail{
+         margin: 20px 40px;
+         margin-top: -40px;
+         background-color: white;
+         position: relative;
+         padding: 20px;
+         text-align: center;
+     }
+
+     .event__description{
+        text-align: left;
+     }
+
+     .event__url{
+        color: #056fff;
+        border: 1px solid #056fff;
+        padding: 5px 20px;
+        text-decoration: none;
+        border-radius: 5px;
+     }
+
+     .contact{
+         background-color: #056fff;
+         color: white;
+         height: 150px;
+         display: flex;
+         align-items: center;
+         justify-content: space-between;
+     }
+
+     .formEmail input{
+        border-color: gray;
+        border-radius: 5px;
+        border-style: solid;
+        padding: 5px 20px 5px 25px;
+        background-image: url(../images/envelope.svg);
+        background-size: 15px 15px;
+        background-repeat: no-repeat;
+        background-position-y: center ;
+        background-position-x: 5px;
+     }
+
+     .formEmail button{
+         display: block;
+         background: transparent;
+         color: white;
+         padding: 10px 0px;
+         border-radius: 5px;
+         width: 100px;
+         margin-top: 10px;
+         border-color: white;
+         border-style: solid;
+     }
+     
+     .formEmail__title{
+        font-family: 'Fjalla One', sans-serif;
+        text-transform: uppercase;
+     }
+
+     .social{
+     }
+
+     .social-link{
+         display: inline-block;
+         width: 50px;
+         height: 50px;
+         margin: 0px 30px;
+     }
+
+     .social-link.twitter{
+         background-image: url(../images/twitter.svg);
+         background-size: 50px 50px;
+     }
+     .social-link.facebook{
+         background-image: url(../images/facebook.svg);
+         background-size: 50px 50px;
+     }
+     .social-link.github{
+         background-image: url(../images/github.svg);
+         background-size: 50px 50px;
+     }
+     .social-link.instagram{
+         background-image: url(../images/instagram.svg);
+         background-size: 50px 50px;
+     }
+
+     .container{
+         /* border: 1px solid red; */
+         width: 1000px;
+         margin: 0px auto;
+         display: inherit;
+         justify-content: inherit;
+         align-items: inherit;
+         height: inherit;
+         flex-wrap: inherit;
+     }
+
+     .eventTitle{
+         background-color: #fafafa;
+     }
